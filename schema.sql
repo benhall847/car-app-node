@@ -1,7 +1,7 @@
-create table tv_shows (
+create table cars (
     id serial primary key,
-    name text,
-    season text,
-    status text
+    make text,
+    model text,
+    year text
 )
 ;

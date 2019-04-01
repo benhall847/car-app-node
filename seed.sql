@@ -1,9 +1,9 @@
-insert into tv_shows
-(name, season, status)
+insert into cars
+(make, model, year)
 values
-('Game of Thrones', 'Season 8', 'production'),
-('Game of Thrones', 'Season 7', 'released'),
-('Better call saul', 'Season 3', 'released'),
-('Better call saul', 'Season 4', 'filming'),
-('Futurama', 'Season 25', 'Canceled')
+('Ford', 'mustang', '1974'),
+('Honda', 'Civic', '2010'),
+('BMW', '', '2016'),
+('Ford', 'F750', '1972'),
+('Toyota', 'Season 25', 'Canceled')
 ;

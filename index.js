@@ -2,7 +2,7 @@ const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3000;
 
-const TvShows = require('./models/tvApp')
+const Cars = require('./models/carApp')
 
 const server = http.createServer(async(req,res)=>{
     res.statusCode = 200;
@@ -11,13 +11,13 @@ const server = http.createServer(async(req,res)=>{
     const reqURL = req.url.split('/');
     console.log(reqURL[2])
     const method = req.method;
-    if(req.url.startsWith('/shows')){
+    if(req.url.startsWith('/cars')){
         if (method === 'GET'){
             if (reqURL.length === 2){
-                response = await TvShows.getAll();
+                response = await Cars.getAll();
                 response = JSON.stringify(response);
             }else if (reqURL.length === 3){
-                response = await TvShows.getByStatus(reqURL[2]);
+                response = await Cars.getByMake(reqURL[2]);
 
                 response = JSON.stringify(response);
             };
